@@ -63,6 +63,15 @@ transform: translate(0px,-10px);
 box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
+#suiteview{
+    text-align: center; 
+    padding: 80px; 
+    color:rgb(240, 223, 200); 
+    font-size: xx-large; 
+    background-image: url(lobby\ image.jpg); 
+    background-size: cover;
+}
+
 
 
 
