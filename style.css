@@ -1,0 +1,73 @@
+.header_content{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    background-color: beige;
+    margin: 0;
+}
+
+
+
+#main_name{
+    padding: 20px;
+    margin: 20px;
+    padding-left: 100px;
+    color: rgb(110, 61, 2);
+
+}
+
+.nav_main{
+    padding: 45px;
+    padding-right: 500px;
+    
+}
+.nav_content{
+    padding: 10px;
+    margin: 10px;
+    color:rgb(145, 107, 58);
+}
+
+.accommodations_section{
+    padding: 100px;
+    padding-bottom: 200x;
+    
+    background-color: beige;
+}
+#header_cards{
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(137, 116, 88);
+    
+}
+.accommodations_div{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.accommodations_part{
+    background-color:rgb(197, 182, 118);
+    padding: 30px;
+    width: 400px;
+    height: 400px;
+    transition: 0.25s, box-shadow 0.3s;
+    border-radius: 10px;
+}
+.accommodations_part:hover{
+transform: translate(0px,-10px);
+box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+
