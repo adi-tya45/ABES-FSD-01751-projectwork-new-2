@@ -1,38 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .header_content{
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    position: sticky;
-    z-index: 1000;
-    top: 0;
     background-color: beige;
-    margin: 0;
+    padding: 15px 0;
+    
+    top: 0;
+    z-index: 1000;
 }
 
 
 
 #main_name{
-    padding: 20px;
-    margin: 20px;
-    padding-left: 100px;
+    display: flex;
+    padding:10px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 100px;
     color: rgb(110, 61, 2);
+    background-color:cornsilk, border-radius 10px; 
+    transition: o.3s, box-shadow 0.3;
+    border: 2px solid;
+    align-items: center;
+    
 
 }
 
+#main_name:hover{
+    
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);;
+}
+
+
 .nav_main{
-    padding: 45px;
-    padding-right: 500px;
+   
+    margin-right: 50px ;
+    border: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
     
 }
 .nav_content{
-    padding: 10px;
-    margin: 10px;
+   
+  
+    padding: 10px 15px;
     color:rgb(145, 107, 58);
+    border: 2px solid;
+    background-color: bisque;
+    text-decoration: none; 
+    font-size: 16px; 
+    font-family: Arial, sans-serif; 
+    
+    transition: 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
 }
 
+.nav_content:hover{
+transform: translate(0px,-5px);
+box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+.nav_content:visited{
+    color: grey;
+}
+
+.booknow{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s, box-shadow 0.2s;
+    background-color: blanchedalmond;
+}
+.booknow:hover{
+    box-shadow: 0 0 10px 0 black;
+}
+.booknow:visited{
+    color: black;
+}
+
+
 .accommodations_section{
-    padding: 100px;
+   
     padding-bottom: 200x;
+    padding-top: 20px;
+    padding-bottom: 20px;
     
     background-color: beige;
 }
@@ -46,8 +107,11 @@
 .accommodations_div{
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 10px;
     margin-top: 20px;
+    margin-right: 50px ;
+    margin-left: 50px;
+    margin-bottom: 20px;
 }
 
 .accommodations_part{
@@ -68,7 +132,8 @@ box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
     padding: 80px; 
     color:rgb(240, 223, 200); 
     font-size: xx-large; 
-    background-image: url(lobby\ image.jpg); 
+    background-image: url(lobby\ image.jpg) ; 
+    filter: blur();
     background-size: cover;
 }
 
