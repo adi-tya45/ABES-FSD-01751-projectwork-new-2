@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore More</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #D946EF 0%, #8B5CF6 100%);
+        }
+
+        body {
+            background-image: url('benjamin-voros-phIFdC6lA4E-unsplash.jpg'); 
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: #1a1a1a; 
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 50px 0;
+            scroll-behavior: smooth;
+        }
+
+        .card_content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .card_content_article {
+            position: relative;
+            border-radius: 2rem;
+            overflow: hidden;
+            height: 400px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .card_image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .card_shadow {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.9) 100%);
+            pointer-events: none;
+        }
+
+        .card_data {
+            position: absolute;
+            left: 1.5rem; bottom: 2rem;
+            z-index: 10;
+            color: white;
+        }
+        .card_name { font-size: 1.5rem; font-weight: 600; }
+        .card_view { font-size: 0.9rem; opacity: 0.8; }
+
+        .card_clip {
+            position: absolute;
+            top: 1.5rem; right: 1.5rem;
+            border-radius: 50%;
+            height: 3rem; width: 3rem;
+            display: flex;
+            justify-content: center; align-items: center;
+            z-index: 10;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: white;
+            transition: transform 0.2s;
+        }
+        .card_clip:hover { transform: rotate(45deg) scale(1.1); }
+
+        .grey { background-color: #fedfcf; box-shadow: 0 0 10px #fedfcf; color: #333; }
+        .green { background-color: #5f7866; box-shadow: 0 0 10px #5f7866; }
+        .blue { background-color: #90a8c2; box-shadow: 0 0 10px #90a8c2; }
+        
+        input.card-toggle { display: none; }
+
+        .card_details {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(15px);
+            display: flex;
+            justify-content: center; align-items: center;
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 20;
+        }
+
+        input.card-toggle:checked ~ .card_details { transform: translateY(0); }
+
+        .card_details_content {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease 0.1s;
+        }
+
+        input.card-toggle:checked ~ .card_details .card_details_content {
+            opacity: 1; transform: translateY(0);
+        }
+
+        .card_details h3 {
+            font-size: 1.8rem; margin-bottom: 1rem;
+            background: var(--primary-gradient);
+            font-weight: bold;
+        }
+        .card_details p { font-size: 0.95rem; margin-bottom: 1rem; color: #cbd5e1; }
+        .price { font-size: 1.2rem; font-weight: bold; color: #fff; margin-bottom: 1.5rem; }
+
+        .close_btn {
+            display: inline-flex; align-items: center; gap: 5px;
+            padding: 8px 20px;
+            border: 2px solid #8B5CF6;
+            color: white; border-radius: 20px;
+            cursor: pointer; transition: 0.3s;
+            font-size: 0.9rem;
+        }
+        .close_btn:hover { background: #8B5CF6; box-shadow: 0 0 15px #8B5CF6; }
+
+    </style>
+</head>
+<body>
+
+    <div class="card_content">
+        
+        <article class="card_content_article">
+            <input type="checkbox" id="exp-card-1" class="card-toggle">
+            
+            <img src="mountain.jpg" alt="Mountain View" class="card_image">
+            <div class="card_shadow"></div>
+            
+            <div class="card_data">
+                <h2 class="card_name">Mountain Escape</h2>
+                <span class="card_view">Mountains are calling</span>
+            </div>
+            
+            <label for="exp-card-1" class="card_clip grey">
+                <i class="ri-arrow-right-line"></i>
+            </label>
+
+            <div class="card_details">
+                <div class="card_details_content">
+                    <h3>Highland Haven</h3>
+                    <p>Breath in the fresh air at 10,000 feet. Features guided hiking tours.</p>
+                    <p class="price">$200 / Night</p>
+                    <label for="exp-card-1" class="close_btn">Close <i class="ri-close-line"></i></label>
+                </div>
+            </div>
+        </article>
+
+        <article class="card_content_article">
+            <input type="checkbox" id="exp-card-2" class="card-toggle">
+            
+            <img src="Jungle.jpg" alt="Jungle View" class="card_image">
+            <div class="card_shadow"></div>
+            
+            <div class="card_data">
+                <h2 class="card_name">Forest Vacation</h2>
+                <span class="card_view">Close to Nature</span>
+            </div>
+            
+            <label for="exp-card-2" class="card_clip green">
+                <i class="ri-arrow-right-line"></i>
+            </label>
+
+            <div class="card_details">
+                <div class="card_details_content">
+                    <h3>Wilderness Retreat</h3>
+                    <p>Stay in luxury treehouses surrounded by wildlife.</p>
+                    <p class="price">$180 / Night</p>
+                    <label for="exp-card-2" class="close_btn">Close <i class="ri-close-line"></i></label>
+                </div>
+            </div>
+        </article>
+        
+        <article class="card_content_article">
+            <input type="checkbox" id="exp-card-3" class="card-toggle">
+            
+            <img src="mountain.jpg" alt="Mountain View" class="card_image">
+            <div class="card_shadow"></div>
+            
+            <div class="card_data">
+                <h2 class="card_name">Mountain Escape</h2>
+                <span class="card_view">Mountains are calling</span>
+            </div>
+            
+            <label for="exp-card-3" class="card_clip grey">
+                <i class="ri-arrow-right-line"></i>
+            </label>
+
+            <div class="card_details">
+                <div class="card_details_content">
+                    <h3>Highland Haven</h3>
+                    <p>Breath in the fresh air at 10,000 feet.</p>
+                    <p class="price">$200 / Night</p>
+                    <label for="exp-card-3" class="close_btn">Close <i class="ri-close-line"></i></label>
+                </div>
+            </div>
+        </article>
+        
+        <article class="card_content_article">
+            <input type="checkbox" id="exp-card-4" class="card-toggle">
+            
+            <img src="Beach View.jpg" alt="Beach View" class="card_image">
+            <div class="card_shadow"></div>
+            
+            <div class="card_data">
+                <h2 class="card_name">Beachside Resort</h2>
+                <span class="card_view">Relax by the Sea</span>
+            </div>
+            
+            <label for="exp-card-4" class="card_clip blue">
+                <i class="ri-arrow-right-line"></i>
+            </label>
+
+            <div class="card_details">
+                <div class="card_details_content">
+                    <h3>Ocean Paradise</h3>
+                    <p>Experience the ultimate relaxation with our private beach villas.</p>
+                    <p class="price">$150 / Night</p>
+                    <label for="exp-card-4" class="close_btn">Close <i class="ri-close-line"></i></label>
+                </div>
+            </div>
+        </article>
+
+        <article class="card_content_article">
+            <input type="checkbox" id="exp-card-5" class="card-toggle">
+            
+            <img src="Jungle.jpg" alt="Jungle View" class="card_image">
+            <div class="card_shadow"></div>
+            
+            <div class="card_data">
+                <h2 class="card_name">Forest Vacation</h2>
+                <span class="card_view">Close to Nature</span>
+            </div>
+            
+            <label for="exp-card-5" class="card_clip green">
+                <i class="ri-arrow-right-line"></i>
+            </label>
+
+            <div class="card_details">
+                <div class="card_details_content">
+                    <h3>Wilderness Retreat</h3>
+                    <p>Stay in luxury treehouses surrounded by wildlife.</p>
+                    <p class="price">$180 / Night</p>
+                    <label for="exp-card-5" class="close_btn">Close <i class="ri-close-line"></i></label>
+                </div>
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

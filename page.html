@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+<Style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('benjamin-voros-phIFdC6lA4E-unsplash.jpg') no-repeat center center/cover;
+    backdrop-filter: blur(5px);
+}
+.container{
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 350px;
+}
+.container h2{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+#email{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+#password{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+#for_email{
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+#for_password{
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #D946EF 0%, #8B5CF6 100%);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover{
+    background: linear-gradient(135deg, #8B5CF6 0%, #D946EF 100%);
+}
+</Style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h2>Sign In to StarLight Travels</h2>
+            <form action="#" method="post" class="signin_form">
+                <label for="email" id="for_email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="abc@email.com">
+
+                <label for="password" id="for_password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit" class="signin_button">Sign In</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
