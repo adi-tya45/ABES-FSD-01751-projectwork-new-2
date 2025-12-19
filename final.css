@@ -152,8 +152,14 @@ main { padding-top: 80px; padding-bottom: 50px; }
     left: 1.5rem; bottom: 2rem;
     z-index: 10;
 }
-.card_name { font-size: 1.5rem; font-weight: 600; }
-.card_view { font-size: 0.9rem; opacity: 0.8; }
+.card_name { 
+    font-size: 1.5rem;
+    font-weight: 600; 
+}
+.card_view { 
+    font-size: 0.9rem;
+    opacity: 0.8; 
+}
 
 .card_clip {
     position: absolute;
@@ -170,10 +176,19 @@ main { padding-top: 80px; padding-bottom: 50px; }
 }
 .card_clip:hover { transform: rotate(45deg) scale(1.1); }
 
-.grey { background-color: #fedfcf; box-shadow: 0 0 10px #fedfcf; color: #333; }
-.green { background-color: #5f7866; box-shadow: 0 0 10px #5f7866; }
-.blue { background-color: #90a8c2; box-shadow: 0 0 10px #90a8c2; }
-input.card-toggle { display: none; }
+.grey { background-color: #fedfcf; 
+    box-shadow: 0 0 10px #fedfcf; 
+    color: #333; 
+}
+.green { background-color: #5f7866; 
+    box-shadow: 0 0 10px #5f7866; 
+}
+.blue { background-color: #90a8c2; 
+    box-shadow: 0 0 10px #90a8c2; 
+}
+input.card-toggle {
+    display: none; 
+    }
 
 .card_details {
     position: absolute;

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Adventure - StarLight</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #D946EF 0%, #8B5CF6 100%);
+        }
+
+        body {
+    
+            background-image: url('benjamin-voros-phIFdC6lA4E-unsplash.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 600px; 
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.75); 
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            background: var(--primary-gradient);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+ 
+        .full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #D946EF;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+
+        select option {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            background: var(--primary-gradient);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(217, 70, 239, 0.5);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr; 
+            }
+            .full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <h2>Start Your Journey</h2>
+            <form action="#">
+                
+                <div class="form-grid">
+                    <div class="input-box full-width">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Email</label>
+                        <input type="email" placeholder="email@example.com" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="+1 234 567 890">
+                    </div>
+
+                    <div class="input-box full-width">
+                        <label>Select Destination</label>
+                        <select required>
+                            <option value="" disabled selected>Choose a location...</option>
+                            <option value="highland">Highland Haven (Mountains)</option>
+                            <option value="ocean">Ocean Paradise (Beach)</option>
+                            <option value="wilderness">Wilderness Retreat (Forest)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Check-in Date</label>
+                        <input type="date" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>No. of Guests</label>
+                        <input type="number" min="1" max="10" placeholder="2" required>
+                    </div>
+
+                    <div class="input-box full-width">
+                        <label>Special Requests</label>
+                        <textarea placeholder="Any dietary restrictions or special arrangements?"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Confirm Booking</button>
+            </form>
+
+            <a href="final.html" class="back-link">
+                <i class="ri-arrow-left-line"></i> Back to Home
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
